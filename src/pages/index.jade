@@ -4,3 +4,14 @@ html(lang='en')
   include ../templates/mixins.jade
   
   body
+    .slider-main
+      .slider-main__item.slider-main__item--first
+      .slider-main__item.slider-main__item--second
+      .slider-main__item.slider-main__item--third
+    .wrapper
+      include ../templates/header.jade
+      .title
+        h1.title__content Студия пилатес
+        p.title__comment и функционального тренинга
+        a.btn.title__btn(href="#") Гостевой визит
+      include ../templates/footer.jade

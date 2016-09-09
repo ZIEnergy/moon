@@ -1,0 +1,40 @@
+.socials {
+  display: flex;
+  align-items: center;
+  
+  @media screen and (max-width: @screen-sm) {
+    display: none;
+  }
+  
+  &__item {
+    
+    &:nth-child(n+2) {
+      margin-left: 15px;
+    }
+    
+    &-link {
+      display: block;
+    }
+  }
+}
+  
+.socials__item-link--vk {
+  width: 15px;
+  height: 10px;
+  background: url(../img/social-icon-vk.png) no-repeat;
+  background-size: cover;
+}
+  
+.socials__item-link--instagram {
+  width: 14px;
+  height: 14px;
+  background: url(../img/social-icon-instagram.png) no-repeat;
+  background-size: cover;
+}
+  
+.socials__item-link--fb {
+  width: 13px;
+  height: 13px;
+  background: url(../img/social-icon-fb.svg) no-repeat;
+  background-size: cover;
+}

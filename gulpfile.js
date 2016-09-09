@@ -18,7 +18,7 @@ gulp.task('build', [
 ]);
 
 gulp.task('images', function() {
-  gulp.src('./src/images/*')
+  gulp.src(['./src/images/*','./src/images/**/*'])
     .pipe(gulp.dest('./build/img'));
 });
 

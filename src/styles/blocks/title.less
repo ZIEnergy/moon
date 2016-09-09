@@ -1,0 +1,54 @@
+.title {
+  position: absolute;
+  left: 51%;
+  top: 34.3%;
+  
+  @media screen and (max-width: @screen-md) {
+    top: 27.1%;
+    left: auto;
+    right: 15px;
+    text-align: right;
+  }
+  
+  @media screen and (max-width: @screen-sm) {
+    right: auto;
+    left: 15px;
+    top: 20.4%;
+    text-align: left;
+  }
+  
+  &__content {
+    color: #fff;
+    font-family: @font-family-main;
+    font-size: 72px;
+  
+    @media screen and (max-width: @screen-sm) {
+      font-size: 36px;
+    }
+  }
+  
+  &__comment {
+    color: #fff;
+    font-family: @font-family-main;
+    font-size: 30px;
+    margin-top: 20px;
+  
+    @media screen and (max-width: @screen-sm) {
+      font-size: 18px;
+      margin-top: 9px;
+    }
+  }
+  
+  &__btn {
+    display: none;
+    
+    @media screen and (max-width: @screen-md) {
+      display: inline-block;
+      margin-top: 50px;
+    }
+    
+    @media screen and (max-width: @screen-sm) {
+      margin-top: 31px;
+    }
+  }
+}

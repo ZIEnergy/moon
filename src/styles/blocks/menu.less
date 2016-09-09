@@ -1,0 +1,77 @@
+.menu {
+  
+  &__content {
+    display: flex;
+    @media screen and (max-width: @screen-md) {
+      display: none;
+    }
+  }
+  
+  &__button {
+    
+    display: none;
+    width: 23px;
+    height: 17px;
+    background: url(../img/hamburger.svg) no-repeat;
+    background-size: cover;
+    
+    @media screen and (max-width: @screen-md) {
+      display: block;
+    }
+  }
+  
+  &__item {
+    
+    @media screen and (max-width: @screen-md) {
+      text-align: center;
+    }
+    
+    &:nth-child(n+2) {
+      margin-left: 30px;
+    
+      @media screen and (max-width: @screen-md) {
+        margin-left: 0;
+      }
+    }
+  }
+  
+  &__item-link {
+    font-family: @font-family-main;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.5s ease 0s;
+    position: relative;
+    
+    @media screen and (max-width: @screen-md) {
+      font-size: 18px;
+      line-height: 48px;
+    }
+    
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -8px;
+      right: 0;
+      left: 0;
+      height: 2px;
+      background: @color-main;
+      transform: scale3d(0, 5, 1);
+      transform-origin: 0% 50%;
+      transition: transform 0.3s;
+      transition-timing-function: cubic-bezier(1, 0.68, 0.16, 0.9);
+    }
+    &--active, &:hover {
+      color: @color-main;
+      &:after {
+        transform: scale3d(1, 1, 1);
+      }
+    }
+  }
+  
+}
+
+.fancybox-skin {
+  background: transparent;
+}
