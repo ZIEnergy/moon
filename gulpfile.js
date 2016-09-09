@@ -2,7 +2,7 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     connect = require('gulp-connect'),
     less = require('gulp-less'),
-    less = require('gulp-jade'),
+    jade = require('gulp-jade'),
     runSequence = require('run-sequence')
 
 gulp.task('default', function () {
