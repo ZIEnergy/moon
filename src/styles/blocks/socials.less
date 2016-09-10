@@ -5,6 +5,12 @@
   @media screen and (max-width: @screen-sm) {
     display: none;
   }
+  &--modal {
+    @media screen and (max-width: @screen-md) {
+      display: flex;
+      justify-content: center;
+    }
+  }
   
   &__item {
     
@@ -14,6 +20,11 @@
     
     &-link {
       display: block;
+      transition: @transition;
+      
+      &:hover {
+        opacity: .5;
+      }
     }
   }
 }

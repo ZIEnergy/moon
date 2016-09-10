@@ -1,9 +1,17 @@
 .menu {
   
-  &__content {
-    display: flex;
+  &__wrapper {
+    
     @media screen and (max-width: @screen-md) {
       display: none;
+    }
+  }
+  
+  &__content {
+    display: flex;
+    
+    @media screen and (max-width: @screen-md) {
+      flex-flow: column nowrap;
     }
   }
   
@@ -62,6 +70,7 @@
       transition: transform 0.3s;
       transition-timing-function: cubic-bezier(1, 0.68, 0.16, 0.9);
     }
+    
     &--active, &:hover {
       color: @color-main;
       &:after {
@@ -69,9 +78,14 @@
       }
     }
   }
-  
 }
 
-.fancybox-skin {
-  background: transparent;
+.menu__content-mobile {
+  display: none;
+  text-align: center;
+  margin-top: 50px;
+    
+  @media screen and (max-width: @screen-md) {
+    display: block;
+  }
 }
