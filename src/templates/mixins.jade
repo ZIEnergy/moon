@@ -1,3 +1,39 @@
+mixin header(logoClass, menuClass)
+  header.header
+    a.logo(href="#")
+      .logo__name Луна
+      .logo__img(class=logoClass)
+    nav.menu(class=menuClass)
+      a.menu__button(href="#menu")
+      .menu__wrapper#menu
+        ul.menu__content
+          li.menu__item
+            a(href="#").menu__item-link Главная
+          li.menu__item
+            a(href="#").menu__item-link Программы
+          li.menu__item
+            a(href="#").menu__item-link Тренеры
+          li.menu__item
+            a(href="#").menu__item-link Расписание
+          li.menu__item
+            a(href="#").menu__item-link Галерея
+          li.menu__item
+            a(href="#").menu__item-link Контакты
+        .menu__content-mobile
+          +socials('socials--modal')
+          .phone.phone--modal +7 901 111-11-11
+          
+          
+mixin footer(newClass)
+  footer.footer(class=newClass)
+    .phone +7 901 111-11-11
+    +socials
+
+
+
+
+
+
 mixin socials(newClass)
   ul.socials(class=newClass)
     li.socials__item

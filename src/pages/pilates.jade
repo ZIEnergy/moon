@@ -1,0 +1,19 @@
+doctype html
+html(lang='en')
+  include ../templates/head.jade
+  include ../templates/mixins.jade
+  
+  body
+    .wrapper
+      +header('', 'menu--black')
+      .divided-page
+        .page-half
+          .course.course--pilates
+            .course__content
+              h2.course__name Пилатес
+              p.course__comment программы
+        .page-half
+          .content
+            
+        
+      +footer
