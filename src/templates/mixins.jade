@@ -1,6 +1,6 @@
 mixin header(logoClass, menuClass)
   header.header
-    a.logo(href="#")
+    a.logo(href="index.html")
       .logo__name Луна
       .logo__img(class=logoClass)
     nav.menu(class=menuClass)
@@ -24,15 +24,10 @@ mixin header(logoClass, menuClass)
           .phone.phone--modal +7 901 111-11-11
           
           
-mixin footer(newClass)
-  footer.footer(class=newClass)
+mixin footer(phoneClass, socialsClass)
+  footer.footer(class=phoneClass)
     .phone +7 901 111-11-11
-    +socials
-
-
-
-
-
+    +socials(socialsClass)
 
 mixin socials(newClass)
   ul.socials(class=newClass)
