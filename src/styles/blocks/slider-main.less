@@ -4,7 +4,16 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background: url(http://placehold.it/1920x1080/000000) no-repeat center;
+  background: url(../img/main-bg-1.jpg) no-repeat;
+    
+  @media screen and (max-width: @screen-md) {
+    background-position: bottom left!important;
+  }
+    
+  @media screen and (max-width: @screen-sm) {
+    background-position: bottom left!important;
+    background-size: 170% auto!important;
+  }
   
   &__item {
     width: 100%;
@@ -24,54 +33,6 @@
       background: #000;
       opacity: .38;
       display: block;
-    }
-    
-    &--first {
-      background: url(http://placehold.it/1920x1080/000000) no-repeat center;
-//      background: url(../img/main-bg-1.jpg) no-repeat center;
-      background-size: cover;
-    
-      @media screen and (max-width: @screen-md) {
-        background-size: 150% auto;
-        background-position: left bottom;
-      }
-    
-      @media screen and (max-width: @screen-sm) {
-        background-size: 190% auto;
-        background-position: bottom left;
-      }
-    }
-    
-    &--second {
-      background: url(http://placehold.it/1919x1079/000000) no-repeat center;
-//      background: url(../img/main-bg-2.jpg) no-repeat center;
-      background-size: cover;
-    
-      @media screen and (max-width: @screen-md) {
-        background-size: 150% auto;
-        background-position: left bottom;
-      }
-    
-      @media screen and (max-width: @screen-sm) {
-        background-size: 190% auto;
-        background-position: bottom left;
-      }
-    }
-    
-    &--third {
-      background: url(http://placehold.it/1921x1081/000000) no-repeat center;
-//      background: url(../img/main-bg-3.jpg) no-repeat center;
-      background-size: cover;
-    
-      @media screen and (max-width: @screen-md) {
-        background-size: 150% auto;
-        background-position: left bottom;
-      }
-    
-      @media screen and (max-width: @screen-sm) {
-        background-size: 150% auto;
-        background-position: bottom left;
-      }
     }
   }
 }
