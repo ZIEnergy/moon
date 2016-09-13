@@ -124,10 +124,21 @@
     
     &--full {
       background: @table-course-color;
-    }
-    
-    &--active {
-      border-bottom: 3px solid @color-main;
+      position: relative;
+      
+      &:hover {
+        
+        &:after {
+          content: '';
+          display: block;
+          bottom: 0;
+          left: 0;
+          height: 3px;
+          width: 100%;
+          background: @color-main;
+          position: absolute;
+        }
+      }
     }
   }
   

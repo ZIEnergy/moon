@@ -1,11 +1,5 @@
 /* Fancybox */
 
-.fancybox-opened .fancybox-skin {
-  background: transparent;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0);
-  padding: 0!important;
-}
-
 #fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
 	background-image: url('../img/fancybox/fancybox_sprite.png');
 }
@@ -37,19 +31,19 @@
 	}
 }
 
+.fancybox-skin {
+  border-radius: 0;
+  background: #fff;
+}
+
 .fancybox-close {
   width: 19px;
   height: 19px;
-  background: url(../img/fancybox/close.png) no-repeat;
-  background-size: cover;
-  position: fixed;
-  top: 36px;
-  right: 17px;
+  right: -39px;
+  top: 13px;
+  background: url(../img/close.png) no-repeat;
+  
   &:hover {
-    background: url(../img/fancybox/close-red.svg) no-repeat;
+    background: url(../img/close-red.png) no-repeat;
   }
-}
-
-.fancybox-inner {
-  overflow: hidden!important;
 }

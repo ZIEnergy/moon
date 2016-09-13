@@ -29,6 +29,7 @@ mixin footer(footerClass, phoneClass, socialsClass)
     .phone(class=phoneClass) +7 901 111-11-11
     +socials(socialsClass)
 
+
 mixin socials(newClass)
   ul.socials(class=newClass)
     li.socials__item
@@ -37,3 +38,21 @@ mixin socials(newClass)
       a.socials__item-link.socials__item-link--instagram(href="#")
     li.socials__item
       a.socials__item-link.socials__item-link--fb(href="#")
+      
+mixin modal
+  .modal#modal
+    .tabs
+      a.tabs__item.tabs__item--active(href="#", data-entry-form-link) Запись
+      a.tabs__item(href="#", data-entry-about-link) О занятии
+    .modal__content
+      .modal__entry(data-entry-form)
+        h2.modal__header Функциональный тренинг
+        p.modal__header-comment Для записи на занятие оставьте свои <br>контактные данные
+        form.entry-form
+          input.input.entry-form__input(type="text", placeholder="Ваше имя" name="name")
+          input.input.entry-form__input(type="text", placeholder="Телефон" name="phone")
+          button.btn.entry-form__btn.btn--black 
+            span.btn__content Отправить
+      .modal__about(data-entry-about)
+        h2.modal__header Функциональный тренинг
+        p.modal__text Средний уровень интенсивности. <br><br>Силовая тренировка с использованием дополнительного оборудования Noodles – гибкой палки, помогающей держаться на воде. <br><br>Результат: аэробная выносливость, координация и гибкость, укрепление глубоких мышц. <br><br>Противопоказания: группа здоровья 3 - 4. <br><br>Тренер-преподаватель по плаванию и аквааэробике. <br>Образование: студент МПГУ. <br>Сертифицированный специалист по аквааэробике и грудничковому плаванию. <br>Сертификация Финского Института Акватики и Школы Аквафитнеса AFS. <br>Спортивный разряд по плаванию.
