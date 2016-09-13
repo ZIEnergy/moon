@@ -4,8 +4,8 @@ html(lang='en')
   include ../templates/mixins.jade
   
   body
+    +header('', 'menu--black')
     .wrapper
-      +header('', 'menu--black')
       .divided-page
         .page-half
           .course.course--pilates
@@ -56,4 +56,4 @@ html(lang='en')
                 li.content__list-item Элемент списка 1
                 li.content__list-item Элемент списка 2
                 li.content__list-item Элемент списка 3
-      +footer('', 'socials--black')
+    +footer('footer--transparent', '', 'socials--black')

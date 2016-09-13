@@ -4,8 +4,8 @@ html(lang='en')
   include ../templates/mixins.jade
   
   body
+    +header('logo--black', 'menu--black')
     .wrapper
-      +header('', 'menu--black')
       .divided-page
         .page-half
           .map
@@ -30,4 +30,4 @@ html(lang='en')
             a.content__link.content__link--arrowless(href="#") Instagram
             a.content__link.content__link--arrowless(href="#") facebook.ru
             a.content__link.content__link--arrowless(href="#") vk.com
-      +footer('phone--black', 'socials--black')
+    +footer('footer--transparent', 'phone--black', 'socials--black')

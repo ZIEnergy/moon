@@ -4,8 +4,8 @@ html(lang='en')
   include ../templates/mixins.jade
   
   body
+    +header
     .wrapper
-      +header
       .calendar
         .calendar__top
           .calendar__controls
@@ -195,4 +195,4 @@ html(lang='en')
             a.calendar__course(href="#")
             a.calendar__course(href="#")
             a.calendar__course(href="#")
-      +footer
+    +footer
