@@ -6,10 +6,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+    @media screen and (max-width: @screen-md) {
+      flex-direction: column;
+    }
   }
   
   &__controls {
     display: flex;
+    
+    @media screen and (max-width: @screen-sm) {
+      flex-flow: column nowrap;
+    }
   }
   
   &__controls-item {
@@ -26,18 +34,26 @@
     font-size: 18px;
     text-transform: lowercase;
     
+    @media screen and (max-width: @screen-sm) {
+      padding: 0;
+    }
+    
     &:nth-child(n+2) {
       margin-left: 13px;
+    
+      @media screen and (max-width: @screen-sm) {
+        margin-left: 0;
+        margin-top: 18px;
+      }
     }
     
     &--trainer {
       appearance: none;
       padding: 0 51px 0 37px;
-      background: url(../img/arrow-white.png) no-repeat;
+      background: #000 url(../img/arrow-white.png) no-repeat;
       background-size: 15px 11px;
       background-position: 218px 16px;
       text-transform: none;
-      background: #000;
       
       option {
         color: #fff;
@@ -48,6 +64,12 @@
   &__dates {
     display: flex;
     align-items: center;
+    margin-top: 25px;
+    
+    @media screen and (max-width: @screen-md) {
+      width: 100%;
+      justify-content: space-between;
+    }
   }
   
   &__dates-range {
@@ -55,30 +77,112 @@
     color: #fff;
     font-family: @font-family-main;
     margin: 0 30px;
+    
+    @media screen and (max-width: @screen-md) {
+      font-size: 14px;
+    }
   }
   
-  &__dates-arrow {
-    background: url(../img/arrow-range.png) no-repeat;
-    background-size: cover;
-    width: 11px;
-    height: 20px;
+  &__dates-button {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-family: @font-family-main;
+    text-decoration: none;
+    font-size: 0;
+    
+    @media screen and (max-width: @screen-md) {
+      font-size: 14px;
+    }
+    
+    @media screen and (max-width: @screen-sm) {
+      font-size: 0;
+    }
     
     &--past {
-      
+    
+      &:before {
+        content: '';
+        display: block;
+        background: url(../img/arrow-range.png) no-repeat;
+        background-size: cover;
+        width: 11px;
+        height: 20px;
+    
+        @media screen and (max-width: @screen-md) {
+          margin-right: 15px;
+        }
+      }
     }
     
     &--future {
-      transform: rotate(180deg);
+    
+      &:after {
+        content: '';
+        display: block;
+        background: url(../img/arrow-range.png) no-repeat;
+        background-size: cover;
+        width: 11px;
+        height: 20px;
+        transform: rotate(180deg);
+    
+        @media screen and (max-width: @screen-md) {
+          margin-left: 15px;
+        }
+      }
     }
   }
   
   &__content {
     margin-top: 42px;
     display: flex;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    
+    @media screen and (max-width: @screen-md) {
+      margin-top: 11px;
+    }
   }
   
   &__column {
     width: 12.5%;
+    
+    @media screen and (max-width: @screen-md) {
+      .calendar__course {
+        display: none;
+      }
+    }
+    
+    @media screen and (max-width: @screen-sm) {
+      &:first-child {
+        width: 19%;
+      }
+    }
+    
+    &--active {
+    
+      @media screen and (max-width: @screen-md) {
+        
+        .calendar__courses-container {
+          position: absolute;
+          width: 100%;
+          margin-left: -12%;
+        }
+        
+        .calendar__course {
+          display: flex;
+          line-height: 14px;
+        }
+      }
+      
+      @media screen and (max-width: @screen-sm) {
+        
+        .calendar__courses-container {
+          margin-left: -10.45%;
+        }
+      }
+    }
   }
   
   &__header-item {
@@ -91,6 +195,16 @@
     display: flex;
     padding-left: 15px;
     align-items: center;
+    
+    @media screen and (max-width: @screen-md) {
+      font-size: 14px;
+    }
+    
+    @media screen and (max-width: @screen-sm) {
+      padding: 0 4px;
+      text-align: center;
+      font-size: 12px;
+    }
     
     &--active {
       background: @table-bg-active;
@@ -113,6 +227,14 @@
     font-family: @font-family-main;
     color: #fff;
     text-decoration: none;
+    
+    @media screen and (max-width: @screen-md) {
+      height: 71px;
+    }
+  }
+  
+  &__courses-container {
+    
   }
   
   &__course {
@@ -125,8 +247,11 @@
     color: #fff;
     font-size: 12px;
     line-height: 14px;
-    width: 12.5;
     height: 85px;
+    
+    @media screen and (max-width: @screen-md) {
+      height: 71px;
+    }
     
     &--full {
       background: @table-course-color;
@@ -146,17 +271,19 @@
         }
       }
     }
-  }
-  
-  &__course-name {
     
-  }
-  
-  &__course-trainer {
-    
-  }
-  
-  &__course-name {
-    
+    &--active {
+      
+      &:after {
+        content: '';
+        display: block;
+        bottom: 0;
+        left: 0;
+        height: 3px;
+        width: 100%;
+        background: @color-main;
+        position: absolute;
+      }
+    }
   }
 }

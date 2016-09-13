@@ -27,7 +27,7 @@
           height: 100%;
           left: 0;
           top: 0;
-          background: rgba(0, 0, 0, .8);
+          background: rgba(0, 0, 0, .85);
           position: absolute;
         }
       }
@@ -137,13 +137,26 @@
   &--black {
     width: 50%;
     background: #fff;
+
+    @media screen and (max-width: @screen-md) {
+      background: transparent;
+      width: auto;
+    }
     
     .menu__content {
       justify-content: flex-start;
       padding-left: 20px;
+
+      @media screen and (max-width: @screen-md) {
+        padding-left: 0;
+      }
     
       .menu__item-link {
         color: #000;
+
+        @media screen and (max-width: @screen-md) {
+          color: #fff;
+        }
       }
     }
   }

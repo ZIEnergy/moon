@@ -16,9 +16,9 @@ html(lang='en')
               option(value="Elena") Елена Смолина
               option(value="Andrey") Андрей Смольный
           .calendar__dates
-            a.calendar__dates-arrow.calendar__dates-arrow--past(href="#")
+            a.calendar__dates-button.calendar__dates-button--past(href="#") Предыдущая неделя
             .calendar__dates-range 15 августа - 21 августа
-            a.calendar__dates-arrow.calendar__dates-arrow--future(href="#")
+            a.calendar__dates-button.calendar__dates-button--future(href="#") Следующая неделя
         .calendar__content
           .calendar__column
             .calendar__header-item.calendar__header-item--icon
@@ -39,161 +39,168 @@ html(lang='en')
             .calendar__time 21:00
           .calendar__column
             .calendar__header-item Пн. 15
-            a.calendar__course.calendar__course--full(href="#modal", data-entry)
-              p.calendar__course-name Пилатес
-              p.calendar__course-trainer Елена Смолина
-              p.calendar__course-name Кол-во мест: 2
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            a.calendar__course.calendar__course--full(href="#modal", data-entry)
-              p.calendar__course-name Пилатес
-              p.calendar__course-trainer Елена Смолина
-              p.calendar__course-name Кол-во мест: 2
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-          .calendar__column
+            .calendar__courses-container
+              a.calendar__course.calendar__course--full(href="#modal", data-entry)
+                p.calendar__course-name Пилатес
+                p.calendar__course-trainer Елена Смолина
+                p.calendar__course-name Кол-во мест: 2
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              a.calendar__course.calendar__course--full(href="#modal", data-entry)
+                p.calendar__course-name Пилатес
+                p.calendar__course-trainer Елена Смолина
+                p.calendar__course-name Кол-во мест: 2
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+          .calendar__column.calendar__column--active
             .calendar__header-item.calendar__header-item--active Вт. 16
-            .calendar__course
-            a.calendar__course.calendar__course--full(href="#modal", data-entry)
-              p.calendar__course-name Функциональный тренинг
-              p.calendar__course-trainer Андрей Смольный
-              p.calendar__course-name Кол-во мест: 0
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            a.calendar__course.calendar__course--full(href="#modal", data-entry)
-              p.calendar__course-name Функциональный тренинг
-              p.calendar__course-trainer Андрей Смольный
-              p.calendar__course-name Кол-во мест: 0
-            .calendar__course
-            .calendar__course
-            .calendar__course
+            .calendar__courses-container
+              .calendar__course
+              a.calendar__course.calendar__course--full.calendar__course--active(href="#modal", data-entry)
+                p.calendar__course-name Функциональный тренинг
+                p.calendar__course-trainer Андрей Смольный
+                p.calendar__course-name Кол-во мест: 0
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              a.calendar__course.calendar__course--full(href="#modal", data-entry)
+                p.calendar__course-name Функциональный тренинг
+                p.calendar__course-trainer Андрей Смольный
+                p.calendar__course-name Кол-во мест: 0
+              .calendar__course
+              .calendar__course
+              .calendar__course
           .calendar__column
             .calendar__header-item Ср. 17
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            a.calendar__course.calendar__course--full(href="#modal", data-entry)
-              p.calendar__course-name Пилатес
-              p.calendar__course-trainer Елена Смолина
-              p.calendar__course-name Кол-во мест: 2
-            .calendar__course
-            .calendar__course
-            a.calendar__course.calendar__course--full(href="#modal", data-entry)
-              p.calendar__course-name Пилатес
-              p.calendar__course-trainer Елена Смолина
-              p.calendar__course-name Кол-во мест: 2
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            a.calendar__course.calendar__course--full(href="#modal", data-entry)
-              p.calendar__course-name Функциональный тренинг
-              p.calendar__course-trainer Андрей Смольный
-              p.calendar__course-name Кол-во мест: 0
-            .calendar__course
-            .calendar__course
-            a.calendar__course.calendar__course--full(href="#modal", data-entry)
-              p.calendar__course-name Пилатес
-              p.calendar__course-trainer Елена Смолина
-              p.calendar__course-name Кол-во мест: 2
-            .calendar__course
+            .calendar__courses-container
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              a.calendar__course.calendar__course--full(href="#modal", data-entry)
+                p.calendar__course-name Пилатес
+                p.calendar__course-trainer Елена Смолина
+                p.calendar__course-name Кол-во мест: 2
+              .calendar__course
+              .calendar__course
+              a.calendar__course.calendar__course--full(href="#modal", data-entry)
+                p.calendar__course-name Пилатес
+                p.calendar__course-trainer Елена Смолина
+                p.calendar__course-name Кол-во мест: 2
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              a.calendar__course.calendar__course--full(href="#modal", data-entry)
+                p.calendar__course-name Функциональный тренинг
+                p.calendar__course-trainer Андрей Смольный
+                p.calendar__course-name Кол-во мест: 0
+              .calendar__course
+              .calendar__course
+              a.calendar__course.calendar__course--full(href="#modal", data-entry)
+                p.calendar__course-name Пилатес
+                p.calendar__course-trainer Елена Смолина
+                p.calendar__course-name Кол-во мест: 2
+              .calendar__course
           .calendar__column
             .calendar__header-item Чт. 18
-            a.calendar__course.calendar__course--full(href="#modal", data-entry)
-              p.calendar__course-name Функциональный тренинг
-              p.calendar__course-trainer Андрей Смольный
-              p.calendar__course-name Кол-во мест: 0
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            a.calendar__course.calendar__course--full(href="#modal", data-entry)
-              p.calendar__course-name Функциональный тренинг
-              p.calendar__course-trainer Андрей Смольный
-              p.calendar__course-name Кол-во мест: 0
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
+            .calendar__courses-container
+              a.calendar__course.calendar__course--full(href="#modal", data-entry)
+                p.calendar__course-name Функциональный тренинг
+                p.calendar__course-trainer Андрей Смольный
+                p.calendar__course-name Кол-во мест: 0
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              a.calendar__course.calendar__course--full(href="#modal", data-entry)
+                p.calendar__course-name Функциональный тренинг
+                p.calendar__course-trainer Андрей Смольный
+                p.calendar__course-name Кол-во мест: 0
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
           .calendar__column
             .calendar__header-item Пт. 19
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            a.calendar__course.calendar__course--full(href="#modal", data-entry)
-              p.calendar__course-name Пилатес
-              p.calendar__course-trainer Елена Смолина
-              p.calendar__course-name Кол-во мест: 2
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            a.calendar__course.calendar__course--full(href="#modal", data-entry)
-              p.calendar__course-name Пилатес
-              p.calendar__course-trainer Елена Смолина
-              p.calendar__course-name Кол-во мест: 2
+            .calendar__courses-container
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              a.calendar__course.calendar__course--full(href="#modal", data-entry)
+                p.calendar__course-name Пилатес
+                p.calendar__course-trainer Елена Смолина
+                p.calendar__course-name Кол-во мест: 2
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              a.calendar__course.calendar__course--full(href="#modal", data-entry)
+                p.calendar__course-name Пилатес
+                p.calendar__course-trainer Елена Смолина
+                p.calendar__course-name Кол-во мест: 2
           .calendar__column
             .calendar__header-item Сб. 20
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            a.calendar__course.calendar__course--full(href="#modal", data-entry)
-              p.calendar__course-name Пилатес
-              p.calendar__course-trainer Елена Смолина
-              p.calendar__course-name Кол-во мест: 2
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
+            .calendar__courses-container
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              a.calendar__course.calendar__course--full(href="#modal", data-entry)
+                p.calendar__course-name Пилатес
+                p.calendar__course-trainer Елена Смолина
+                p.calendar__course-name Кол-во мест: 2
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
           .calendar__column
             .calendar__header-item Вс. 21
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
-            .calendar__course
+            .calendar__courses-container
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
+              .calendar__course
     +footer
     +modal

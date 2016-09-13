@@ -3,12 +3,21 @@
   &:nth-child(n+2) {
     margin-top: 50px;
   }
+  
   &__content {
     display: flex;
+
+    @media screen and (max-width: @screen-sm) {
+      flex-direction: column;
+    }
   }
   
   &__left {
     margin-right: 14px;
+
+    @media screen and (max-width: @screen-sm) {
+      margin-bottom: 20px;
+    }
   }
   
   &__photo {

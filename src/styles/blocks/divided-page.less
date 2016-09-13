@@ -1,6 +1,9 @@
 .divided-page {
   display: flex;
-  align-items: stretch;
   height: 100%;
   flex: 1;
+
+  @media screen and (max-width: @screen-md) {
+    flex-flow: column nowrap;
+  }
 }

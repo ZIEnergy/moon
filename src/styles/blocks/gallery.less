@@ -8,9 +8,23 @@
   margin: 0 auto;
   padding: 140px 0 90px;
   transition: @transition;
+
+  @media screen and (max-width: @screen-md) {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
   
   &__item {
     position: relative;
+
+    @media screen and (max-width: @screen-md) {
+      width: 31%;
+    }
+
+    @media screen and (max-width: @screen-sm) {
+      width: 100%;
+    }
     
     &:hover {
       
@@ -34,8 +48,23 @@
       }
     }
     
+    &:nth-child(n+2) {
+
+      @media screen and (max-width: @screen-sm) {
+        margin-top: 34px;
+      }
+    }
+    
     &:nth-child(n+4) {
       margin-top: 40px;
+
+      @media screen and (max-width: @screen-md) {
+        margin-top: 25px;
+      }
+
+      @media screen and (max-width: @screen-sm) {
+        margin-top: 34px;
+      }
     }
   }
   
