@@ -8,25 +8,25 @@ mixin header(logoClass, menuClass)
       .menu__wrapper#menu
         ul.menu__content
           li.menu__item
-            a(href="#").menu__item-link Главная
+            a(href="index.html").menu__item-link Главная
           li.menu__item
-            a(href="#").menu__item-link Программы
+            a(href="courses.html").menu__item-link Программы
           li.menu__item
-            a(href="#").menu__item-link Тренеры
+            a(href="trainers.html").menu__item-link Тренеры
           li.menu__item
             a(href="#").menu__item-link Расписание
           li.menu__item
-            a(href="#").menu__item-link Галерея
+            a(href="gallery.html").menu__item-link Галерея
           li.menu__item
-            a(href="#").menu__item-link Контакты
+            a(href="contacts.html").menu__item-link Контакты
         .menu__content-mobile
           +socials('socials--modal')
           .phone.phone--modal +7 901 111-11-11
           
           
 mixin footer(phoneClass, socialsClass)
-  footer.footer(class=phoneClass)
-    .phone +7 901 111-11-11
+  footer.footer
+    .phone(class=phoneClass) +7 901 111-11-11
     +socials(socialsClass)
 
 mixin socials(newClass)

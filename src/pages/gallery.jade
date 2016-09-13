@@ -1,0 +1,37 @@
+doctype html
+html(lang='en')
+  include ../templates/head.jade
+  include ../templates/mixins.jade
+  
+  body
+    .wrapper
+      +header
+      ul.gallery
+        li.gallery__item
+          a.gallery__item-link(href="#")
+            img.gallery__item-img(src="img/gallery-1.jpg", alt="Clients")
+        li.gallery__item
+          a.gallery__item-link(href="#")
+            img.gallery__item-img(src="img/gallery-2.jpg", alt="Clients")
+        li.gallery__item
+          a.gallery__item-link(href="#")
+            img.gallery__item-img(src="img/gallery-3.jpg", alt="Clients")
+        li.gallery__item
+          a.gallery__item-link(href="#")
+            img.gallery__item-img(src="img/gallery-4.jpg", alt="Clients")
+        li.gallery__item
+          a.gallery__item-link(href="#")
+            img.gallery__item-img(src="img/gallery-1.jpg", alt="Clients")
+        li.gallery__item
+          a.gallery__item-link(href="#")
+            img.gallery__item-img(src="img/gallery-2.jpg", alt="Clients")
+        li.gallery__item
+          a.gallery__item-link(href="#")
+            img.gallery__item-img(src="img/gallery-3.jpg", alt="Clients")
+        li.gallery__item
+          a.gallery__item-link(href="#")
+            img.gallery__item-img(src="img/gallery-4.jpg", alt="Clients")
+        li.gallery__item
+          a.gallery__item-link(href="#")
+            img.gallery__item-img(src="img/gallery-1.jpg", alt="Clients")
+      +footer

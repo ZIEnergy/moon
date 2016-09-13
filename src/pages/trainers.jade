@@ -1,0 +1,36 @@
+doctype html
+html(lang='en')
+  include ../templates/head.jade
+  include ../templates/mixins.jade
+  
+  body
+    .wrapper
+      +header('', 'menu--black')
+      .divided-page
+        .page-half
+          .course.course--pilates
+            .course__content
+              h2.course__name Тренеры
+        .page-half
+          .content
+            .trainer
+              h1.content__header-big Анастасия Фролова
+              .trainer__content
+                .trainer__left
+                  img.trainer__photo(src="img/trainer-1.jpg", alt="Анастасия Фролова")
+                  a.trainer__schedule.content__link(href="#") Посмотреть расписание
+                .trainer__text
+                  p.content__text Система пилатес включает в себя упражнения для всех частей тела. Данная система упражнений была разработана в начале XX века, но получила наибольшее признание в начале XXI века.
+                  p.content__text Система пилатес включает в себя упражнения для всех частей тела. Данная система упражнений была разработана в начале XX века, но получила наибольшее
+                  p.content__text Была разработана в начале XX века, но получила наибольшее была разработана в начале XX века
+            .trainer
+              h1.content__header-big Андрей Иванов
+              .trainer__content
+                .trainer__left
+                  img.trainer__photo(src="img/trainer-2.jpg", alt="Анастасия Фролова")
+                  a.trainer__schedule.content__link(href="#") Посмотреть расписание
+                .trainer__text
+                  p.content__text Система пилатес включает в себя упражнения для всех частей тела. Данная система упражнений была разработана в начале XX века, но получила наибольшее признание в начале XXI века.
+                  p.content__text Система пилатес включает в себя упражнения для всех частей тела. Данная система упражнений была разработана в начале XX века, но получила наибольшее
+                  p.content__text Была разработана в начале XX века, но получила наибольшее была разработана в начале XX века
+      +footer('', 'socials--black')
