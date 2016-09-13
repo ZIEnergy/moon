@@ -6,6 +6,7 @@ mixin header(logoClass, menuClass)
     nav.menu(class=menuClass)
       a.menu__button(href="#menu")
       .menu__wrapper#menu
+        a.menu__close(href="#")
         ul.menu__content
           li.menu__item
             a(href="index.html").menu__item-link Главная
