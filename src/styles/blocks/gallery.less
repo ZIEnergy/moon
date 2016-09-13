@@ -7,8 +7,31 @@
   align-items: center;
   margin: 0 auto;
   padding: 140px 0 90px;
+  transition: @transition;
   
   &__item {
+    position: relative;
+    
+    &:hover {
+      
+      .gallery__item-img {
+        -webkit-filter: blur(2px);
+      }
+            
+      &:after {
+        content: '';
+        display: block;
+        background: url(../img/plus.png) no-repeat;
+        background-size: cover;
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -35px;
+        margin-top: -35px;
+      }
+    }
     
     &:nth-child(n+4) {
       margin-top: 40px;

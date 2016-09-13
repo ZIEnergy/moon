@@ -7,13 +7,15 @@ $(document).ready(function() {
     fade: true,
     cssEase: 'linear',
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 5000,
     touchMove: false,
     swipe: false,
   });
   
   if ($(window).width() < 991) {
     $('.menu__button').fancybox();
-  }
+  };
+  
+  $('.gallery__item-link').fancybox();
   
 });

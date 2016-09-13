@@ -1,0 +1,146 @@
+.calendar {
+  margin: 144px 14px 156px;
+//  background: url(../img/calendar-bg.png) no-repeat center 123px;
+  
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  &__controls {
+    display: flex;
+  }
+  
+  &__controls-item {
+    display: block;
+    height: 43px;
+    line-height: 39px;
+    text-align: center;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: @font-family-main;
+    padding: 0 40px;
+    font-size: 18px;
+    text-transform: lowercase;
+    
+    &:nth-child(n+2) {
+      margin-left: 13px;
+    }
+    
+    &--trainer {
+      appearance: none;
+      padding-left: 37px;
+      padding-right: 88px;
+      background: url(../img/arrow-white.png) no-repeat;
+      background-size: 15px 11px;
+      background-position: 218px 16px;
+    }
+  }
+  
+  &__dates {
+    display: flex;
+    align-items: center;
+  }
+  
+  &__dates-range {
+    font-size: 18px;
+    color: #fff;
+    font-family: @font-family-main;
+    margin: 0 30px;
+  }
+  
+  &__dates-arrow {
+    background: url(../img/arrow-range.png) no-repeat;
+    background-size: cover;
+    width: 11px;
+    height: 20px;
+    
+    &--past {
+      
+    }
+    
+    &--future {
+      transform: rotate(180deg);
+    }
+  }
+  
+  &__content {
+    margin-top: 42px;
+    display: flex;
+  }
+  
+  &__column {
+    width: 12.5%;
+  }
+  
+  &__header-item {
+    height: 40px;
+    width: 100%;
+    background: @table-bg;
+    color: #fff;
+    font-family: @font-family-main;
+    font-size: 18px;
+    display: flex;
+    padding-left: 15px;
+    align-items: center;
+    
+    &--active {
+      background: @table-bg-active;
+    }
+    
+    &--icon {
+      background: @table-bg-active url(../img/icon-clock.png) no-repeat;
+      background-size: 22px 22px;
+      background-position: center;
+    }
+  }
+  
+  &__time {
+    height: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: @table-bg;
+    font-size: 12px;
+    font-family: @font-family-main;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  &__course {
+    font-family: @font-family-main;
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+    text-decoration: none;
+    padding: 0 20px;
+    color: #fff;
+    font-size: 12px;
+    line-height: 14px;
+    width: 12.5;
+    height: 85px;
+    
+    &--full {
+      background: @table-course-color;
+    }
+    
+    &--active {
+      border-bottom: 3px solid @color-main;
+    }
+  }
+  
+  &__course-name {
+    
+  }
+  
+  &__course-trainer {
+    
+  }
+  
+  &__course-name {
+    
+  }
+}
