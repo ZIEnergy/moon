@@ -19,7 +19,7 @@ $(document).ready(function() {
   function changeBackground(){
       var index = imageIndex++ % imagesArray.length;
       $(".slider-main").hide();
-      $(".slider-main").css("background","url('"+ imagesArray[index] + "') no-repeat left center");
+      $(".slider-main").css("background","url(" + imagesArray[index] + ") no-repeat left bottom");
       $(".slider-main").fadeIn(3000);
   }
   

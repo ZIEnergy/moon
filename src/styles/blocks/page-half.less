@@ -2,12 +2,26 @@
   width: 50%;
   position: relative;
   height: 100vh;
+  
+  &:first-child {
+    @media screen and (max-width: @screen-md) {
+//      width: 100%;
+//      height: 50vh;
+    }
+  }
+  
+  &:last-child {
+    @media screen and (max-width: @screen-md) {
+//      width: 100%;
+    }
+  }
 
   @media screen and (max-width: @screen-md) {
     width: 100%;
     flex: 1;
     display: flex;
     flex-direction: column;
+    height: 50vh;
     height: auto;
     min-height: 50vh;
   }
