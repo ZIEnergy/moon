@@ -71,4 +71,19 @@ $(document).ready(function() {
     transition: function(url){ window.location.href = url; }
   });
   
+  ymaps.ready(function(){
+      moscow_map = new ymaps.Map("map", {
+          center: [47.229746, 39.717932],
+          zoom: 17
+      });
+var myPlacemark = new ymaps.Placemark([47.229746, 39.717932], {}, {
+      iconLayout: 'default#image',
+      iconImageHref: '/img/placemark.png',
+      iconImageSize: [29, 45],
+      iconImageOffset: [-29, -45]
+  });
+
+moscow_map.geoObjects.add(myPlacemark);
+  });
+  
 });

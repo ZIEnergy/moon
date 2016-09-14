@@ -3,13 +3,18 @@
   
   &__item {
     display: flex;
+    
+    &:nth-child(n+2) {
+      margin-top: 18px;
+    }
   }
   
   &__header {
     font-size: 14px;
-    line-height: 36px;
+    line-height: 18px;
     font-family: @font-family-main;
     width: 130px;
+    flex: 0 0 auto;
 
     @media screen and (max-width: @screen-sm) {
       width: 105px;
@@ -18,7 +23,7 @@
   
   &__content {
     font-size: 14px;
-    line-height: 36px;
+    line-height: 18px;
     font-family: @font-family-main;
   }
 }

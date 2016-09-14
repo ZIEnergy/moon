@@ -51,6 +51,7 @@
   
   &__content {
     display: flex;
+    width: 100%;
     
     @media screen and (max-width: @screen-md) {
       flex-direction: column;
@@ -78,6 +79,10 @@
     
     &:nth-child(n+2) {
       margin-left: 30px;
+    
+      @media screen and (max-width: (@screen-md + 100)) {
+        margin-left: 20px;
+      }
     
       @media screen and (max-width: @screen-md) {
         margin-left: 0;
@@ -134,6 +139,23 @@
     }
   }
   
+  &--center {
+    width: 50%;
+
+    @media screen and (max-width: @screen-md) {
+      width: auto;
+    }
+    
+    .menu__content {
+      justify-content: flex-start;
+      padding-left: 20px;
+    }
+
+    @media screen and (max-width: @screen-md) {
+      padding-left: 0;
+    }
+  }
+  
   &--black {
     width: 50%;
     background: #fff;
@@ -153,6 +175,10 @@
     
       .menu__item-link {
         color: #000;
+        
+        &:hover {
+          color: @color-main;
+        }
 
         @media screen and (max-width: @screen-md) {
           color: #fff;
