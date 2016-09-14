@@ -9,21 +9,19 @@ $(document).ready(function() {
     $('.menu__wrapper').removeClass('menu__wrapper--active');
   });
   
-  var imageIndex = 0;
-  var imagesArray = [
-      "../img/main-bg-2.jpg",
-      "../img/main-bg-3.jpg",
-      "../img/main-bg-1.jpg"
-  ];
-
-  function changeBackground(){
-      var index = imageIndex++ % imagesArray.length;
-      $(".slider-main").hide();
-      $(".slider-main").css("background","url(" + imagesArray[index] + ") no-repeat left bottom");
-      $(".slider-main").fadeIn(3000);
+  function slider() {
+    $.backstretch([
+        "../img/main-bg-2.jpg"
+      , "../img/main-bg-3.jpg"
+      , "../img/main-bg-1.jpg"
+  //    "http://placehold.it/1922x1080",
+  //    "http://placehold.it/1921x1080",
+  //    "http://placehold.it/1919x1080"
+    ], {duration: 6000, fade: 3000});
   }
   
-  setInterval(changeBackground, 8000);
+  setTimeout(slider, 3000);
+
   
   $('[data-gallery]').fancybox();
   

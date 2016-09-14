@@ -168,7 +168,8 @@
     
     @media screen and (max-width: @screen-sm) {
       &:first-child {
-        width: 19%;
+        width: 55px;
+        flex: 0 0 auto;
       }
     }
     
@@ -179,7 +180,8 @@
         .calendar__courses-container {
           position: absolute;
           width: 100%;
-          margin-left: -12%;
+//          margin-left: -12%;
+          left: 12.5%;
         }
         
         .calendar__course {
@@ -191,7 +193,14 @@
       @media screen and (max-width: @screen-sm) {
         
         .calendar__courses-container {
-          margin-left: -10.45%;
+          left: 55px;
+        }
+      }
+      
+      @media screen and (max-width: @screen-xs) {
+        
+        .calendar__courses-container {
+//          left: 52px;
         }
       }
     }
@@ -213,7 +222,8 @@
     }
     
     @media screen and (max-width: @screen-sm) {
-      padding: 0 4px;
+      padding: 0 5px;
+      justify-content: center;
       text-align: center;
       font-size: 12px;
     }
