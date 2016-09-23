@@ -102,6 +102,11 @@
     font-family: @font-family-main;
     text-decoration: none;
     font-size: 0;
+    transition: @transition;
+    
+    &:hover {
+      opacity: .7;
+    }
     
     @media screen and (max-width: @screen-md) {
       font-size: 14px;
@@ -216,6 +221,8 @@
     display: flex;
     padding-left: 15px;
     align-items: center;
+    text-decoration: none;
+    transition: @transition;
     
     @media screen and (max-width: @screen-md) {
       font-size: 14px;
@@ -228,7 +235,7 @@
       font-size: 12px;
     }
     
-    &--active {
+    &--active, &:hover {
       background: @table-bg-active;
     }
     
