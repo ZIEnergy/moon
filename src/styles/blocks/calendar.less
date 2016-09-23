@@ -208,6 +208,8 @@
     font-family: @font-family-main;
     color: #fff;
     text-decoration: none;
+    flex: 0 0 auto;
+    min-height: 85px;
     
     &--active, &:hover {
       background: @table-bg-active;
@@ -216,6 +218,19 @@
   
   &__courses-container {
     width: 12.5%;
+      
+    @media screen and (max-width: @screen-md) {
+      display: none
+    }
+    
+    &--device {
+      display: none;
+      
+      @media screen and (max-width: @screen-md) {
+        display: block;
+        width: 100%;
+      }
+    }
   }
   
   &__course {
@@ -231,6 +246,7 @@
     font-size: 12px;
     line-height: 14px;
     padding: 20px;
+    min-height: 85px;
     
     &--full {
       background: @table-course-color;
