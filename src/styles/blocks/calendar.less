@@ -1,6 +1,6 @@
 .calendar {
   margin: 144px 14px 120px;
-  background: url(../img/calendar-bg.png) no-repeat center 123px;
+//  background: url(../img/calendar-bg.png) no-repeat center 123px;
     
   @media screen and (max-width: @screen-md) {
     background-position: center 250px;
@@ -152,62 +152,13 @@
   
   &__content {
     margin-top: 42px;
-    display: flex;
+//    display: flex;
     overflow: hidden;
     width: 100%;
     position: relative;
     
     @media screen and (max-width: @screen-md) {
       margin-top: 11px;
-    }
-  }
-  
-  &__column {
-    width: 12.5%;
-    
-    @media screen and (max-width: @screen-md) {
-      .calendar__course {
-        display: none;
-      }
-    }
-    
-    @media screen and (max-width: @screen-sm) {
-      &:first-child {
-        width: 55px;
-        flex: 0 0 auto;
-      }
-    }
-    
-    &--active {
-    
-      @media screen and (max-width: @screen-md) {
-        
-        .calendar__courses-container {
-          position: absolute;
-          width: 100%;
-//          margin-left: -12%;
-          left: 12.5%;
-        }
-        
-        .calendar__course {
-          display: flex;
-          line-height: 14px;
-        }
-      }
-      
-      @media screen and (max-width: @screen-sm) {
-        
-        .calendar__courses-container {
-          left: 55px;
-        }
-      }
-      
-      @media screen and (max-width: @screen-xs) {
-        
-        .calendar__courses-container {
-//          left: 52px;
-        }
-      }
     }
   }
   
@@ -223,6 +174,7 @@
     align-items: center;
     text-decoration: none;
     transition: @transition;
+    width: 12.5%;
     
     @media screen and (max-width: @screen-md) {
       font-size: 14px;
@@ -247,7 +199,7 @@
   }
   
   &__time {
-    height: 85px;
+    width: 12.5%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -257,13 +209,13 @@
     color: #fff;
     text-decoration: none;
     
-    @media screen and (max-width: @screen-md) {
-      height: 71px;
+    &--active, &:hover {
+      background: @table-bg-active;
     }
   }
   
   &__courses-container {
-    
+    width: 12.5%;
   }
   
   &__course {
@@ -278,11 +230,7 @@
     color: #fff;
     font-size: 12px;
     line-height: 14px;
-    height: 85px;
-    
-    @media screen and (max-width: @screen-md) {
-      height: 71px;
-    }
+    padding: 20px;
     
     &--full {
       background: @table-course-color;
@@ -316,5 +264,9 @@
         position: absolute;
       }
     }
+  }
+  
+  &__row {
+    display: flex;
   }
 }
