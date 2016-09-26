@@ -54,14 +54,9 @@ html(lang='en')
               .calendar__course
           .calendar__row
             a.calendar__time.calendar__time--active(href="#") 08:00
-            .calendar__courses-container.calendar__courses-container--active
-              a.calendar__course.calendar__course--full.calendar__course--active(href="#modal", data-entry)
-                p.calendar__course-name Пилатес
-                p.calendar__course-trainer Елена Смолина
-                p.calendar__course-name Кол-во мест: 2
             .calendar__courses-container
               .calendar__course
-            .calendar__courses-container.calendar__courses-container--full
+            .calendar__courses-container.calendar__courses-container--full.calendar__courses-container--active
               a.calendar__course.calendar__course--active.calendar__course--full(href="#modal", data-entry)
                 p.calendar__course-name Пилатес
                 p.calendar__course-trainer Елена Смолина
@@ -228,6 +223,10 @@ html(lang='en')
           .calendar__row
             a.calendar__time(href="#") 17:00
             .calendar__courses-container.calendar__courses-container--active
+              a.calendar__course.calendar__course--full(href="#modal", data-entry)
+                p.calendar__course-name Пилатес
+                p.calendar__course-trainer Елена Смолина
+                p.calendar__course-name Кол-во мест: 3
               a.calendar__course.calendar__course--full(href="#modal", data-entry)
                 p.calendar__course-name Пилатес
                 p.calendar__course-trainer Елена Смолина
